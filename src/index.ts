@@ -6,6 +6,11 @@ const app = new App({
   bodyLimitBytes: 256 * 1024,
   requestTimeoutMs: 5_000,
   production: true,
+  // Cloudflare's edge is exactly one trusted hop and always sets X-Forwarded-For.
+  // Without this, the production boot guard rejects the spoofable header and 500s every request.
+  behindProxy: { hops: 1 },
+  docs: true,
+  openapi: { info: { title: "My Daloy Cloudflare API", version: "0.0.1" } },
 });
 
 app.use(requestId());
