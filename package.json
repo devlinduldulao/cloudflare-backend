@@ -11,13 +11,13 @@
     "audit": "npm audit --prod"
   },
   "dependencies": {
-    "@daloyjs/core": "^0.38.2",
+    "@daloyjs/core": "latest",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240909.0",
-    "tsx": "^4.22.3",
-    "typescript": "^6.0.3",
-    "wrangler": "^4.0.0"
+    "@cloudflare/workers-types": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "wrangler": "latest"
   }
 }
